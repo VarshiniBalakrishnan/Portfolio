@@ -1,0 +1,257 @@
+
+
+
+/* Custom styles alongside Bootstrap */
+/* @import "../bootstrap.custom.css"; */
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+
+body {
+  background: linear-gradient(180deg,#071025,#0b1220 60%);
+  color: #fff;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+.card-glass {
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.btn-primary-custom {
+  background: #8b0000;
+  border-color: #8b0000;
+}
+
+/* Force all text inside cards to be white */
+.card,
+.card * {
+  color: #fff !important;
+}
+
+/* Titles slightly brighter */
+.card-title {
+  color: #ffffff !important;
+}
+
+/* Subtext lighter */
+.card-text {
+  color: #d1d5db !important; /* gray-300 */
+}
+
+/* Fix skills tags if Bootstrap badges are used */
+.badge {
+  color: #fff !important;
+}
+
+/* Fix navbar links */
+.nav-link {
+  color: #fff !important;
+}
+
+.nav-link:hover {
+  color: #8b0000 !important; /* your theme red */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* index.css - Theme variables + shared styles */
+
+/* default variables (Theme A by default) */
+:root{
+  --bg: #071025;
+  --bg-2: #0b1220;
+  --surface: rgba(255,255,255,0.04);
+  --card-border: rgba(255,255,255,0.06);
+  --text: #ffffff;
+  --muted: #cbd5e1; /* gray-300 */
+  --accent: #8b0000;
+  --accent-2: #ff6b6b;
+  --glass-blur: 8px;
+  --glass-shadow: 0 12px 30px rgba(0,0,0,0.5);
+}
+
+/* Theme B - Red Cyber */
+.theme-b {
+  --bg: #060506;
+  --bg-2: #0b0508;
+  --surface: rgba(255,20,20,0.04);
+  --card-border: rgba(139,0,0,0.24);
+  --text: #fff7f7;
+  --muted: #ffdede;
+  --accent: #ff0033;
+  --accent-2: #ff6b6b;
+}
+
+/* Theme C - Pastel Minimal */
+.theme-c {
+  --bg: #fff7fb;
+  --bg-2: #f0f7ff;
+  --surface: rgba(255,255,255,0.7);
+  --card-border: rgba(0,0,0,0.06);
+  --text: #0b1220;
+  --muted: #4b5563;
+  --accent: #7f5af0;
+  --accent-2: #ffd6e0;
+}
+
+/* Theme D - Neon / Animated */
+.theme-d {
+  --bg: linear-gradient(180deg,#050014,#071025);
+  --bg-2: #071025;
+  --surface: rgba(10,255,200,0.03);
+  --card-border: rgba(0,255,200,0.08);
+  --text: #dffbf7;
+  --muted: #9adacb;
+  --accent: #00f5c4;
+  --accent-2: #00a3a3;
+}
+
+.theme-e {
+  --bg: #FFF8F3;
+  --bg-2: #FFEBD9;
+  --surface: rgba(247,198,163,0.25);
+  --card-border: rgba(247,198,163,0.45);
+  --text: #5A4635;
+  --muted: #8f7864;
+  --accent: #F7C6A3;
+  --accent-2: #E89A6F;
+}
+
+.theme-f {
+  --bg: #FFFFFF;
+  --bg-2: #EFFFF8;
+  --surface: rgba(152,240,192,0.22);
+  --card-border: rgba(114,217,164,0.4);
+  --text: #345C47;
+  --muted: #5f7d6b;
+  --accent: #98F0C0;
+  --accent-2: #72D9A4;
+}
+
+.theme-g {
+  --bg: #FFF7F5;
+  --bg-2: #FFECE8;
+  --surface: rgba(255,127,106,0.23);
+  --card-border: rgba(255,90,71,0.45);
+  --text: #2C363F;
+  --muted: #4f5f68;
+  --accent: #FF7F6A;
+  --accent-2: #4FD1C5;
+}
+
+.theme-h {
+  --bg: #F8F7FF;
+  --bg-2: #EDEBFF;
+  --surface: rgba(200,182,255,0.25);
+  --card-border: rgba(161,133,255,0.45);
+  --text: #4C4C5A;
+  --muted: #6d6d7f;
+  --accent: #C8B6FF;
+  --accent-2: #A185FF;
+}
+
+.theme-i {
+  --bg: #FFF9F7;
+  --bg-2: #F5E7DA;
+  --surface: rgba(231,161,176,0.22);
+  --card-border: rgba(216,132,149,0.45);
+  --text: #624B4B;
+  --muted: #836f70;
+  --accent: #E7A1B0;
+  --accent-2: #D88495;
+}
+
+.theme-j {
+  --bg: #f7f5ab;
+  --bg-2: #FFDD33;
+  --surface: rgba(255,230,109,0.25);
+  --card-border: rgba(255,221,51,0.45);
+  --text: #5B5B29;
+  --muted: #7a7a45;
+  --accent: #FFE66D;
+  --accent-2: #FFDD33;
+}
+
+
+/* base layout */
+html,body,#root{
+  height:100%;
+}
+body{
+  margin:0;
+  background: var(--bg);
+  background-image: none;
+  color: var(--text);
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  transition: background .45s ease, color .3s ease;
+  padding-top: 72px; /* for fixed navbar */
+}
+
+/* If theme variable is a gradient string (theme-d), we handle via special class */
+.theme-d body, .theme-d {
+  background: var(--bg);
+}
+
+/* Glass card */
+.card-glass {
+  background: var(--surface);
+  backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--card-border);
+  box-shadow: var(--glass-shadow);
+  color: var(--text);
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
+/* force Bootstrap default text overrides */
+.card, .card * { color: inherit !important; }
+.navbar, .nav-link { color: var(--text) !important; }
+
+/* Buttons */
+.btn-theme {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.08);
+  color: var(--text);
+  transition: all .18s ease;
+}
+.btn-accent {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  border: none;
+  color: #fff;
+}
+.btn-theme:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+}
+
+/* project card hover */
+.project-card:hover { transform: translateY(-10px); box-shadow: 0 20px 60px rgba(0,0,0,0.5); }
+
+/* smaller utilities */
+.lead-muted { color: var(--muted); }
+.small-muted { color: var(--muted); }
+.badge-theme { background: rgba(255,255,255,0.06); color: var(--text); }
+
+/* Theme switcher pills */
+.theme-switcher { display:flex; gap:8px; align-items:center; }
+.theme-pill {
+  width:38px; height:38px; border-radius:10px; cursor:pointer; border: 2px solid rgba(255,255,255,0.06);
+  display:flex; align-items:center; justify-content:center; transition: transform .18s ease, box-shadow .18s ease;
+}
+.theme-pill:hover { transform: scale(1.06); box-shadow: 0 10px 30px rgba(0,0,0,0.35); }
+
+/* responsive */
+@media (max-width:768px){
+  .container { padding: 1rem; }
+}
